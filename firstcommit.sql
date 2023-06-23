@@ -45,6 +45,45 @@ foreign key(author_code) references author(author_code) ON UPDATE CASCADE ON DEL
 foreign key(vendor_code) references vendor(vendor_code) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
+     /*Member Table*/
+create table member (
+    mem_id int not null primary key,
+    name varchar2(200) not null,
+    address varchar2(300) not null,
+    contact_no int not null,
+    mem_type varchar2(100) not null
+    );
+
+    /*Employee Table*/
+create table employee(emp_id int primary key
+    ,emp_name varchar(200) not null,
+    mobile_no int not null,
+    designation varchar(100) not null
+    );
+
+     /*Admin Table*/
+create table admin(
+    admin_id int primary key,
+    admin_name varchar(200) not null,
+    contact_no int not null);
+
+     /*Borrower Table*/
+create table borrower(
+    borrower_id int primary key,
+    mem_id int foreign key references member(mem_id),
+    book_id int foreign key references books(book_id),
+    borroweddate date not null
+    );
+
+     /*Loan Table*/
+create table loan(
+    loan_id int primary key,
+    mem_id int foreign key references member(mem_id),
+    book_id int foreign key references books(book_id),
+    date_out date not null,
+    due_date date not null
+    );
+
     /* --------END OF TABLE CREATION-------- */
 
 
