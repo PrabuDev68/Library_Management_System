@@ -134,3 +134,48 @@ VALUES
     (203, 'Vendor C'),
     (204, 'Vendor D'),
     (205, 'Vendor E');    
+
+     /* Insert values into member table */
+INSERT INTO member (mem_id, name, address, contact_no, mem_type)
+VALUES
+    (1, 'John Smith', '123 Main Street, City A', '111-222-3333', 'Regular'),
+    (2, 'Jane Doe', '456 Park Avenue, City B', '444-555-6666', 'Premium'),
+    (3, 'David Lee', '789 Elm Road, City C', '777-888-9999', 'Regular'),
+    (4, 'Sarah Brown', '321 Oak Lane, City D', '111-222-3333', 'Premium'),
+    (5, 'Michael Wong', '654 Maple Street, City E', '444-555-6666', 'Regular');
+
+     /* Insert values into employee table */
+INSERT INTO employee (emp_id, emp_name, mobile_no, designation)
+VALUES
+    (1, 'John Smith', '111-222-3333', 'Manager'),
+    (2, 'Jane Doe', '444-555-6666', 'Librarian'),
+    (3, 'David Lee', '777-888-9999', 'Clerk'),
+    (4, 'Sarah Brown', '111-222-3333', 'IT Administrator'),
+    (5, 'Michael Wong', '444-555-6666', 'Assistant Manager');
+
+     /* Insert values into admin table */
+INSERT INTO admin (admin_id, admin_name, contact_no)
+VALUES
+    (1, 'John Smith', '111-222-3333'),
+    (2, 'Jane Doe', '444-555-6666'),
+    (3, 'David Lee', '777-888-9999'),
+    (4, 'Sarah Brown', '111-222-3333'),
+    (5, 'Michael Wong', '444-555-6666');
+
+     /* Insert values into borrower table */
+INSERT INTO borrower (borrower_id, mem_id, book_id, borroweddate)
+VALUES
+    (201, 1, 1000, '2023-06-01'),
+    (202, 2, 3000, '2023-06-02'),
+    (203, 3, 2000, '2023-06-03'),
+    (204, 4, 4000, '2023-06-04'),
+    (205, 5, 5000, '2023-06-05');
+
+     /* Insert values into loan table */
+INSERT INTO loan (loan_id, mem_id, book_id, date_out, due_date)
+VALUES
+    (101, 1, 1000, '2023-06-01', '2023-06-15'),
+    (102, 2, 3000, '2023-06-02', '2023-06-16'),
+    (103, 3, 2000, '2023-06-03', '2023-06-17'),
+    (104, 4, 4000, '2023-06-04', '2023-06-18'),
+    (105, 5, 5000, '2023-06-05', '2023-06-19');
