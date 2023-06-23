@@ -98,3 +98,39 @@ insert into publisher values('100','DAW Books','375 Hudson Street, New York, NY 
 		('104','George Allen & Unwin','83 Alexander Ln, Crows Nest NSW 2065, Australia'),
 		('105','Alfred A. Knopf','The Knopf Doubleday Group Domestic Rights, 1745 Broadway, New York, NY 10019'),		
 		('106','Bloomsbury','Bloomsbury Publishing Inc., 1385 Broadway, 5th Floor, New York, NY 10018');
+     /* Author Table */
+INSERT INTO author VALUES
+    (1, 'Literature', 'John Doe'),
+    (2, 'Science', 'Jane Smith'),
+    (3, 'History', 'Michael Johnson'),
+    (4, 'Mathematics', 'Sarah Thompson'),
+    (5, 'Art', 'David Wilson'),
+    (6, 'Literature', 'Micheal Jordan');
+    
+    
+     /* Library Table */
+INSERT INTO library (library_name, library_address, contact_no)
+VALUES
+    ('Central Library', '123 Main Street, Cityville', '123-456-7890'),
+    ('Community Library', '456 Elm Avenue, Townsville', '987-654-3210'),
+    ('Public Library', '789 Oak Lane, Villagetown', '555-123-4567'),
+    ('University Library', '987 Maple Drive, Campustown', '444-555-6666'),
+    ('Digital Library', '555 Pine Street, Cybercity', '777-888-9999');
+     
+     
+     /* Book Table */
+INSERT INTO books VALUES
+	(1000, 250, 101, 201, 1, 'grave of the fireflies'),
+    (2000, 300, 102, 202, 2, 'Wings of fire'),
+    (3000, 200, 103, 203, 3, 'Wolf Street'),
+    (4000, 350, 104, 204, 4, 'Karmazov'),
+    (5000, 400, 105, 205, 5, 'The Crime And The Punsihment');
+    
+     /* Vendor Table */
+INSERT INTO vendor (vendor_code, vendor_name)
+VALUES
+    (201, 'Vendor A'),
+    (202, 'Vendor B'),
+    (203, 'Vendor C'),
+    (204, 'Vendor D'),
+    (205, 'Vendor E');    
